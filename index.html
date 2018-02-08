@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html class="no-js"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!--<base href="/qae/">--><base href=".">
+    <title>Citizenpedia</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+      <link rel="stylesheet" href="./assets/app.css">
+  </head>
+  <body ng-app="paizaqaApp" class="ng-scope" cz-shortcut-listen="true">
+
+    <navbar><p ng-show="nav.detectIE()" class="alert alert-danger ng-hide"><a href="http://browsehappy.com/" class="ng-binding">Unfortunately, Citizenpedia is not fully compatible with the version of Internet Explorer that you are using. Click here to download a modern browser.</a></p>
+<div class="navbar navbar-default ng-scope" style="background-color: #009ee0;" ng-controller="NavbarController">
+  <div class="container">
+    <div class="navbar-header">
+            <a href="https://simpatico.morelab.deusto.es/qae/"><img src="./assets/logo_simpatico_small.png" alt="Simpatico Project" height="50px"></a>
+      <button class="navbar-toggle" type="button" ng-click="nav.isCollapsed = !nav.isCollapsed">
+        <span class="sr-only ng-binding">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div collapse="nav.isCollapsed" class="navbar-collapse collapse" id="navbar-main" aria-expanded="false" aria-hidden="true" style="height: 0px;">
+      <ul class="nav navbar-nav">
+        <li><h3 style="color: #000;" class="navbar-text ng-binding">Citizenpedia</h3> </li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <form ng-show="nav.currentPath() != &#39;/&#39;" class="navbar-form navbar-left ng-pristine ng-valid ng-hide" role="search" ng-submit="nav.search(keyword)">
+          <div class="input-group">
+            <input type="text" class="form-control ng-pristine ng-untouched ng-valid" placeholder="" ng-model="keyword">
+            <span class="input-group-btn">
+              <button type="submit" class="btn btn-default">
+                <span class="glyphicon glyphicon-search">
+                </span>
+              </button>
+            </span>
+          </div>
+        </form>
+
+      </ul>
+
+    </div>
+  </div>
+</div></navbar>
+    <!-- uiView:  --><div ui-view="" class="ng-scope"><!-- ngInclude:  --><div ng-include="" src="&#39;components/header/header.html&#39;" class="ng-scope"><header class="jumbotron vertical-center ng-scope" style="text-align: center;" id="banner">
+  <div class="container">
+    <h1 class="ng-binding">Citizenpedia</h1>
+    <p class="lead ng-binding">Part of the SIMPATICO Project</p>
+  </div>
+
+  <div style="text-align: center">
+    <div ng-show="searchBar" class="container">
+      <h2 class="ng-binding">Administrative Procedure Search</h2>
+    </div>
+    <br>
+    <div ng-show="searchBar" class="col-lg-4 col-sm-4 col-sm-offset-4 col-lg-offset-4 text-center input-group">
+      <form class="navbar-form ng-pristine ng-valid" role="search" ng-submit="nav.search(keyword)">
+          <span class="input-group-btn">
+          <input type="text" class="form-control input-lg ng-pristine ng-untouched ng-valid" placeholder="Search" ng-model="keyword">
+            <button type="submit" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-search"></span></button>
+          </span>
+      </form>
+
+    </div>
+    <br>
+
+      <div ng-show="categories" class="row">
+        <div class="col-md-2"></div>
+        <!-- ngRepeat: category in categoriesList --><div ng-repeat="category in categoriesList" class="col-md-2 col-sm-6 col-xs-6 ng-scope">
+        </div><!-- end ngRepeat: category in categoriesList --><div ng-repeat="category in categoriesList" class="col-md-2 col-sm-6 col-xs-6 ng-scope">
+          <div class="thumbnail" style="background:transparent;">
+            <a href="https://simpatico.morelab.deusto.es/qae/">
+              <img src="./assets/qae.png" style="background:transparent;width:50%">
+              <div class="caption">
+                <p class="ng-binding">QAE</p>
+              </div>
+            </a>
+          </div>
+        </div><!-- end ngRepeat: category in categoriesList --><div ng-repeat="category in categoriesList" class="col-md-2 col-sm-6 col-xs-6 ng-scope">
+          <div class="thumbnail" style="background:transparent;">
+            <a href="https://simpatico.business-engineering.it/cpd/es/">
+              <img src="./assets/cpd.png" style="background:transparent;width:50%">
+              <div class="caption">
+                <p class="ng-binding">CPD</p>
+              </div>
+            </a>
+          </div>
+        </div><!-- end ngRepeat: category in categoriesList --><div ng-repeat="category in categoriesList" class="col-md-2 col-sm-6 col-xs-6 ng-scope">
+
+        </div><!-- end ngRepeat: category in categoriesList -->
+        <div class="col-md-2"></div>
+      </div>
+
+  </div>
+</header></div>
+
+</div><!-- container-->
+</div>
+    <footer class="footer"><div class="container">
+  <p class="ng-binding">Citizenpedia ver. 0.1 |
+    Part of
+    <a href="http://simpatico-project.eu/">Simpatico Project</a>
+    Icons by <a href="https://icons8.com/">Icons8</a>
+  </p>
+</div>
+</footer>
+
+</body></html>
