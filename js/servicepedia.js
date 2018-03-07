@@ -23,6 +23,14 @@ $( function() {
     });
   } );
 
+  $('.input').keypress(function (e) {
+    if (e.which == 13) {
+      console.log("Betis");
+      return false;    //<---- Add this line
+    }
+  });
+
+
   function searchBar ()
   {
     console.log("Yendo");
