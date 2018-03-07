@@ -11,6 +11,10 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
       <link rel="stylesheet" href="./assets/app.css">
+      <link rel="stylesheet" href="./assets/servicepedia.css">
+      <script src="js/jquery-3.3.1.min.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script src="js/procedure.js"></script>
   </head>
   <body>
 
@@ -18,7 +22,7 @@
 <div class="navbar navbar-default ng-scope" style="background-color: #009ee0;" ng-controller="NavbarController">
   <div class="container">
     <div class="navbar-header">
-            <a href="https://simpatico.morelab.deusto.es/qae/"><img src="./assets/logo_simpatico_small.png" alt="Simpatico Project" height="50px"></a>
+            <a href="https://simpatico.morelab.deusto.es/servicepedia/"><img src="./assets/logo_simpatico_small.png" alt="Simpatico Project" height="50px"></a>
       <button class="navbar-toggle" type="button" ng-click="nav.isCollapsed = !nav.isCollapsed">
         <span class="sr-only ng-binding">Toggle navigation</span>
         <span class="icon-bar"></span>
@@ -50,121 +54,28 @@
     </div>
   </div>
 </div></navbar>
-    <!-- uiView:  --><div ui-view="" class="ng-scope"><!-- ngInclude:  --><div ng-include="" src="&#39;components/header/header.html&#39;" class="ng-scope"><header class="jumbotron vertical-center ng-scope" style="text-align: center;" id="banner">
-  <div class="container">
+
+<div class="container">
 
     <div class="panel panel-primary">
-      <div class="panel-heading text-left">
-        <img class="img-responsive pull-left" width="2.3%" height="auto" src="./assets/users.png">
-          Parenting Skills Workshop
-         <img class="img-responsive pull-right" width="2.3%" height="auto" src="./assets/qae.png">
-         <img class="img-responsive pull-right" width="2.3%" height="auto" src="./assets/cpd.png">
+      <div class="row" style="margin: inherit; background-color:#428bca;">
+          <div class="col-md-1"><img class="img-responsive pull-left" style="height:50px;" src="./assets/users.png"></div>
+          <div class="col-md-6"><h3 id="procedure_title"></h3></div>
+          <div class="col-md-1 col-md-offset-3"><a id="primary_link"><img class="img-responsive pull-right" style="height:50px;" src="./assets/qae.png"></a></div>
+          <div class="col-md-1"><a href="https://simpatico.hi-iberia.es:4570/cpd/en/"><img class="img-responsive pull-right" style="height:50px;" src="./assets/cpd.png"></a></div>
       </div>
+
+
+
+      <div id="procedure_documentation" class="panel-body text-left"></div>
+
     </div>
 
-      <div class="panel-body text-left">
-        In Sheffield, parents and carers can access a range of groups that offer practical advice and support with parenting. We deliver programmes that are evidence based, and tried and
-          tested. This means that the content is written by professional psychologists who have years of research into what works to manage behaviours and difficulties that we can all face as
-          parents. These programmes are delivered across the world and have over 30 years of research behind them.
-          We can work with your family when there are difficulties in managing your child's behaviour and to help build closer relationships. You can learn new skills to help you:
-          <ul>
-            <li>build parenting confidence</li>
-            <li>find ways to encourage better behaviour in children</li>
-            <li>deal with anger management or family conflict</li>
-            <li>cope with stress</li>
-          </ul>
-          
-      </div>
+      <div id="phases_container" class="row">
 
+    </div><!-- Row -->
+</div><!-- container-->
 
-    <div class="row">
-        <div class="col-md-4">
-            <div class="panel panel-primary">
-                <div class="panel-heading text-left">
-                  <img class="img-responsive pull-left" width="8%" height="auto" src="./assets/users.png">
-                   1. Workshop application
-                   <img class="img-responsive pull-right" width="8%" height="auto" src="./assets/qae.png">
-                   <img class="img-responsive pull-right" width="8%" height="auto" src="./assets/cpd.png">
-                </div>
-              </div>
-          
-                <div class="panel-body text-left">
-                    The user will complete the online form by entering
-                    required information into the form. The required
-                    information is:
-                    <ul>
-                    <li>Title, First name, Last name.</li>
-                    <li>Contact details: Telephone Number and Email Address.
-                    These are required in order to allocate a booking to the
-                    user, and to contact them to inform them of their place,
-                    or to advise of a change to their booking.</li>
-                    <li>Postal address (this should be in standardised BS7666
-                    format).</li>
-                  </ul>
-                    <br />
-                    The user will then see the range of Parenting Skills
-                    workshops available on each day and select 3 day/time
-                    options which are suitable for them.
-                    <br />
-                    Once all required information is entered, the user will
-                    then be allowed to submit the form.
-                    
-                </div>
-              </div><!-- Columna 1 -->
-        <div class="col-md-4">
-            <div class="panel panel-primary">
-                <div class="panel-heading text-left">
-                  <img class="img-responsive pull-left" width="8%" height="auto" src="./assets/users.png">
-                  2. Workshop booking
-                   <img class="img-responsive pull-right" width="8%" height="auto" src="./assets/qae.png">
-                   <img class="img-responsive pull-right" width="8%" height="auto" src="./assets/cpd.png">
-                </div>
-              </div>
-          
-                <div class="panel-body text-left">
-                    The user will complete the online form by entering
-                    required information into the form. The required
-                    information is:
-                    <ul>
-                    <li>Title, First name, Last name.</li>
-                    <li>Contact details: Telephone Number and Email Address.
-                    These are required in order to allocate a booking to the
-                    user, and to contact them to inform them of their place,
-                    or to advise of a change to their booking.</li>
-                    <li>Postal address (this should be in standardised BS7666
-                    format).</li>
-                  </ul>
-                    The user will then see the range of Parenting Skills
-                    workshops available on each day and select 3 day/time
-                    options which are suitable for them.
-                    Once all required information is entered, the user will
-                    then be allowed to submit the form.
-                    
-                </div>
-              </div><!-- Columna 2 -->
-        
-        <div class="col-md-4">
-            <div class="panel panel-primary">
-                <div class="panel-heading text-left">
-                  <img class="img-responsive pull-left" width="8%" height="auto" src="./assets/users.png">
-                  3. Booked workshop notification
-                   <img class="img-responsive pull-right" width="8%" height="auto" src="./assets/qae.png">
-                   <img class="img-responsive pull-right" width="8%" height="auto" src="./assets/cpd.png">
-                </div>
-              </div>
-          
-                <div class="panel-body text-left">
-                  <ul>
-                    <li>The administrator will add the booking information to
-                        an email – The email includes the workshop information
-                        day/time, workshop location.</li>
-                    <li>The administrator sends the email to the user’s email
-                        address which was entered onto the form.</li>
-                  </ul> 
-                </div>
-              </div><!-- Columna 3 -->
-        </div><!-- Row -->
-      </div><!-- container-->
 </div>
     <footer class="footer"><div class="container">
   <p class="ng-binding">Citizenpedia ver. 0.1 |
