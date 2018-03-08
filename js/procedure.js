@@ -35,8 +35,8 @@ $.getJSON( procedureURL, function( data ) {
       '<div class="col-md-4">'+
         '<div class="panel panel-primary">' +
               '<div class="row" style="margin: inherit; background-color:#428bca; height: auto !important; margin-bottom: 0px !important">'+
-                '<div class="col-md-2"><img class="img-responsive pull-left" src="./assets/users.png"></div>' + 
-                '<div class="col-md-6">' + (index+1) + ".- " + procedureData.phases[index]["name:"] + '</div>' + 
+                '<div class="col-md-2"><img class="img-responsive pull-left" style="margin-top: 4px;"src="./assets/'+(index+1)+'.png"></div>' + 
+                '<div class="col-md-6">' + procedureData.phases[index]["name:"] + '</div>' + 
                 '<div class="col-md-2"><a href="'+qaeURL+eServiceCode+'/Paragraph'+(index+1)+'"><img class="img-responsive pull-right" src="./assets/qae.png"></a></div>' +
                 '<div class="col-md-2"><a href="https://simpatico.hi-iberia.es:4570/cpd/en/"><img class="img-responsive pull-right" src="./assets/cpd.png"></a></div>' + 
               '</div>' + //row
