@@ -80,10 +80,17 @@
     <br>
 
       <div ng-show="categories" class="row">
-        <div class="col-md-2"></div>
-        <div ng-repeat="category in categoriesList" class="col-md-2 col-sm-6 col-xs-6 ng-scope">
+        <div ng-repeat="category in categoriesList" class="col-md-2 col-sm-6 col-xs-6 col-md-offset-3">
+          <div class="thumbnail" style="background:transparent;">
+            <a href="https://simpatico.morelab.deusto.es/servicepedia/services.html">
+              <img src="./assets/services.png" style="background:transparent;width:50%">
+              <div class="caption">
+                <p class="ng-binding">Services</p>
+              </div>
+            </a>
+          </div>
         </div>
-        <div ng-repeat="category in categoriesList" class="col-md-2 col-sm-6 col-xs-6 ng-scope">
+        <div ng-repeat="category in categoriesList" class="col-md-2 col-sm-6 col-xs-6">
           <div class="thumbnail" style="background:transparent;">
             <a href="https://simpatico.morelab.deusto.es/qae/">
               <img src="./assets/qae.png" style="background:transparent;width:50%">
@@ -93,7 +100,7 @@
             </a>
           </div>
         </div>
-        <div ng-repeat="category in categoriesList" class="col-md-2 col-sm-6 col-xs-6 ng-scope">
+        <div ng-repeat="category in categoriesList" class="col-md-2 col-sm-6 col-xs-6">
           <div class="thumbnail" style="background:transparent;">
             <a href="https://simpatico.hi-iberia.es:4570/cpd">
               <img src="./assets/cpd.png" style="background:transparent;width:50%">
@@ -103,7 +110,6 @@
             </a>
           </div>
         </div>
-        <div class="col-md-2"></div>
       </div>
 
   </div>

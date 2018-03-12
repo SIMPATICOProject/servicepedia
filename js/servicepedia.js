@@ -23,7 +23,6 @@ $( function() {
 
 function searchBar ()
 {
-  console.log("Yendo");
   var goTo = $( "#tags" ).val().split('-');
   window.location.href ='procedure.html?'+goTo[0];
 
