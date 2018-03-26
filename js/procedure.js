@@ -26,7 +26,7 @@ $.getJSON( procedureURL, function( data ) {
         var c = procedureData.phases[index].documentation.substr(0, showChar);
         var h = procedureData.phases[index].documentation.substr(showChar, procedureData.phases[index].documentation.length - showChar);
 
-        var documentationText = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+        var documentationText = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a class="morelink">' + moretext + '</a></span>';
       } else {
         var documentationText = procedureData.phases[index].documentation;
       }
@@ -55,7 +55,8 @@ $.getJSON( procedureURL, function( data ) {
 
 
   $(document).ready(function() {
-    $(".morelink").click(function(){
+    $(document.body).on('click', ".morelink" ,function(){
+    // $(".morelink").click(function(){
         if($(this).hasClass("less")) {
             $(this).removeClass("less");
             $(this).html(moretext);

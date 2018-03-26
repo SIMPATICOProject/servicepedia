@@ -72,3 +72,34 @@
       }
     }
   }
+/* 
+.block_element {
+    position:relative;
+    background-color:#659EC7;
+    height:100px !important;
+    width:100% !important;
+}
+.block_element:after {
+    z-index: -1 !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: 50% !important;
+    margin-left: -10px !important;
+    content:'' !important;
+    width: 0 !important;
+    height: 0 !important;
+    border-top: solid 10px #659EC7 !important;
+    border-left: solid 10px transparent !important;
+    border-right: solid 10px transparent !important;
+} */
+
+/* create an arrow that points down */
+div.down {
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #2f2f2f;
+	font-size: 0;
+	line-height: 0;
+}
