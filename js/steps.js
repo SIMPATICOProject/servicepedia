@@ -1,4 +1,6 @@
-var blocksAPI = 'https://simpatico.smartcommunitylab.it/simp-engines/wae/eservice/{eServiceId}?eServiceId=2';
+var eServiceCode = window.location.search.substring(1);
+
+var blocksAPI = 'https://simpatico.smartcommunitylab.it/simp-engines/wae/eservice?eServiceId=' + eServiceCode;
 
 $.getJSON( blocksAPI, function( data ) {
     fillData(data);
