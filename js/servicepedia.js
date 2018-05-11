@@ -36,7 +36,7 @@ function servicesList()
   $.getJSON( summaryURL, function( data ) {
     console.log(data);
       $.each(data,function(index,value){
-        servicesList.push('<a href="procedure.html?'+data[index].phases[0].id+'"><li class="list-group-item">'+data[index].phases[0].id + "-" + data[index].name+'</li></a>');
+        servicesList.push('<a href="procedure.html?'+data[index].id+'"><li class="list-group-item">'+data[index].id + "-" + data[index].name+'</li></a>');
       })
       $('#services_list').append( servicesList.join('') );
     

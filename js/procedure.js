@@ -1,7 +1,9 @@
 var eServiceCode = window.location.search.substring(1);
 
 //var procedureURL = 'https://simpatico.hi-iberia.es:4570/cpd/api/diagram/eService/'+eServiceCode+'/summary';
-var procedureURL = 'https://simpatico.smartcommunitylab.it/cpd/api/diagram/eService/'+eServiceCode+'/summary';
+//var procedureURL = 'https://simpatico.smartcommunitylab.it/cpd/api/diagram/eService/'+eServiceCode+'/summary';
+var procedureURL = 'https://simpatico.business-engineering.it/cpd/api/procedure/'+ eServiceCode +'/summary';
+
 console.log(procedureURL);
 var qaeURL = 'https://simpatico.morelab.deusto.es/qae/questions/list/';
 var procedureData;
@@ -12,7 +14,8 @@ var lesstext = "Show less";
 
 $.getJSON( procedureURL, function( data ) {
     //$.each(data,function(index,value){availableTags.push(data[index].name);})
-    procedureData = data[0];
+    console.log(data);
+    procedureData = data;
     fillData(procedureData);
   });
 
@@ -40,9 +43,8 @@ $.getJSON( procedureURL, function( data ) {
               '<div class="row" style="margin: inherit; background-color:#428bca; height: auto !important; margin-bottom: 0px !important">'+
                 '<div class="col-md-2"><img class="img-responsive pull-left" style="margin-top: 4px;"src="./assets/'+(index+1)+'.png"></div>';
 
-    
-    if (procedureData.phases[index]["eServiceId"] != undefined) {
-      columnHTML +='<a href="steps.html?'+procedureData.phases[index]["eServiceId"]+'"><div class="col-md-2"><img class="img-responsive pull-left" style="margin-top: 4px;"src="./assets/services.png"></div></a>';
+    if (procedureData.phases[index]["eServiceIds"].length > 0) {
+      columnHTML +='<a href="steps.html?'+procedureData.phases[index]["eServiceIds"][0]+'"><div class="col-md-2"><img class="img-responsive pull-left" style="margin-top: 4px;"src="./assets/services.png"></div></a>';
     }
 
     columnHTML += '<div class="col-md-6">' + procedureData.phases[index]["name"] + '</div>' + 

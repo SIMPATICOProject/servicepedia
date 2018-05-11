@@ -1,14 +1,6 @@
 var eServiceCode = window.location.search.substring(1);
 
-var procedureURL = 'https://simpatico.smartcommunitylab.it/cpd/api/diagram/eService/'+eServiceCode+'/summary';
-
 var blocksAPI = 'https://simpatico.smartcommunitylab.it/simp-engines/wae/eservice?eServiceId=' + eServiceCode;
-console.log(blocksAPI);
-var title;
-
-$.getJSON( procedureURL, function( data ) {
-    title = data[0].name;
-});
 
 $.getJSON( blocksAPI, function( data ) {
     fillData(data);
@@ -18,7 +10,7 @@ $.getJSON( blocksAPI, function( data ) {
 function fillData(blockData)
 {
 
-    $('#procedure_title').text(title);
+    $('#procedure_title').text(blockData[0].model.description.it);
 
     $.each(blockData[0].model.workflow,function(index,value){
 
