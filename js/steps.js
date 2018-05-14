@@ -1,13 +1,14 @@
 var eServiceCode = window.location.search.substring(1);
 
-var procedureURL = 'https://simpatico.smartcommunitylab.it/cpd/api/diagram/eService/'+eServiceCode+'/summary';
-
+//var procedureURL = 'https://simpatico.smartcommunitylab.it/cpd/api/diagram/eService/'+eServiceCode+'/summary';
+var procedureURL = 'https://simpatico.business-engineering.it/cpd/api/eService/'+eServiceCode+'/summary';
+console.log(procedureURL);
 var blocksAPI = 'https://simpatico.smartcommunitylab.it/simp-engines/wae/eservice?eServiceId=' + eServiceCode;
 console.log(blocksAPI);
 var title;
 
 $.getJSON( procedureURL, function( data ) {
-    title = data[0].name;
+    title = data.name;
 });
 
 $.getJSON( blocksAPI, function( data ) {
