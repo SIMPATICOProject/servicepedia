@@ -1,0 +1,15 @@
+{
+    "citizenpedia": {
+        "pattern": ["https://simpatico.morelab.deusto.es/qae/"],
+        "value": "https://simpatico.smartcommunitylab.it/qae/"
+    },
+    "servicepedia": {
+        "pattern": ["https://simpatico.morelab.deusto.es/servicepedia/"],
+        "value": "/servicepedia"
+    },
+    "cpd": {
+        "pattern": ["https://simpatico.hi-iberia.es:4570/cpd", "https://simpatico.business-engineering.it/cpd", "https://simpatico.business-engineering.it:443/cpd"],
+        "value": "https://simpatico.smartcommunitylab.it/cpd"
+    }
+    
+}
