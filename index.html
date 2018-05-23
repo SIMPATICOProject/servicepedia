@@ -7,7 +7,7 @@
     
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <!--<base href="/qae/">--><base href=".">
-    <title>Citizenpedia</title>
+    <title>Servicepedia</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
       <link rel="stylesheet" href="./assets/app.css">
@@ -16,9 +16,10 @@
       <script src="js/jquery-3.3.1.min.js"></script>
       <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
       <script src="js/easyautocomplete/jquery.easy-autocomplete.min.js"></script> 
+      <script src="js/config.js"></script>
       <script src="js/servicepedia.js"></script>
   </head>
-  <body>
+  <body onload="loadSearch()">
 
     <navbar>
 <div class="navbar navbar-default ng-scope" style="background-color: #009ee0;" ng-controller="NavbarController">
